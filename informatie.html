@@ -1,0 +1,661 @@
+<html>
+
+<head>
+
+	<title>
+		Informatie	</title>
+
+	<style>
+
+	body {
+		background-image: url("images/gym-banner4.jpg");
+		background-position: center;
+		background-attachment: fixed;
+		background-size: cover;
+		margin: 0;
+		
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.listt {
+  		list-style-type: none;
+		top: 0;
+  		margin: 0;
+  		padding: 5px 0px 5px 10px;
+  		overflow: hidden;
+  		background-color: #1B1B1B;
+		opacity: 1;	
+	}
+
+	.listt a {
+		float: left;
+		text-align: center;
+		color: #DDDDDD;
+		border: 1px solid #1B1B1B;
+		border-radius: 2px;
+		padding: 15px 25px 15px 25px;
+		display: block;
+		font-family: "Courier New";
+		font-size: 17px;
+	}
+
+	.listt a:hover {
+		color: white;
+		background-color: #171717;
+	}
+
+	.listt a .iconify {
+		position: absolute;	
+	}
+
+	.main-content {
+		box-shadow: 0px 0px 4px 1px rgba(0,0,0,1);
+		
+		border-radius: 3px;
+		margin-left: 100px;
+		margin-right: 118px;
+		margin-top: 40px;
+		
+	}
+
+	.category-title {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+	}
+
+	.category-title li {
+		display: inline;
+	}
+
+	.tog-button {
+		float: left;
+		display: block;
+		background-color: rgba(238, 238, 238, 0.8);
+		box-shadow: 0px 0px 1px 0px black;
+		border: 1px solid black;
+		border-radius: 3px;
+		padding: 10px 256px 10px 256px;
+    		cursor: pointer;
+    		outline: none;
+		font-size: 40px;
+		font-family: "Lucida Console";
+		width: 50%;
+		text-align: center;
+		
+	}
+
+	.tog-button:hover {
+		background-color: rgba(240, 240, 240, 0.9);
+	}
+
+
+	.category {
+		background-color: rgba(238, 238, 238, 0.8);
+		visibility: hidden;
+		height: 0px;
+		margin: 0;
+		overflow: auto;
+		transition: visibility 0.8s, opacity 0.8s, height 0.8s;
+		opacity: 0;
+		border-bottom: 1px solid black;
+		box-shadow: 0px 0px 1px 0px black;
+	}
+
+	.category p {
+		max-width: 620px;
+		padding-left: 20px;
+	}
+
+	.change-theme {
+		border-bottom: 1px solid black;
+		border-right: 1px solid black;
+		display: table-cell;
+		padding: 2px 8px 2px 4px;
+	}
+
+	.change-theme-color-button {
+		cursor: pointer;
+		outline: none;
+		border: none;
+		width: 17px;
+		height: 15px;
+	}
+
+	.change-theme-size-button {
+		cursor: pointer;
+		outline: none;
+		border: none;
+		background: none;
+	}
+
+	.category-content {
+		display: inline-block;
+	}
+
+	.category-content .text {
+		float:left;
+	}
+
+	.category-content .images {
+		margin-top: 20px;
+		margin-left: 820px;
+		margin-bottom: 30px;
+	}
+
+	.category-content .images img {
+		height: 350px;
+		width: 450px;
+		opacity: 0.97;
+		border-radius: 20px;
+		box-shadow: 9px 9px 11px 0px rgba(0,0,0,0.56);
+	}
+			
+	</style>
+
+<script src="https://code.iconify.design/1/1.0.0-rc6/iconify.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="shortcut icon" href="images/logo.ico" />
+
+</head>
+
+<body>
+
+
+<ul class="listt">
+
+<li><a href="index.html"><span class="iconify" data-icon="ant-design:home" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Home</a>
+<li><a href="informatie.html"><span class="iconify" data-icon="entypo:info-with-circle" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Informatie</a>
+<li><a href="training-spiermassa.html"><span class="menu"><span class="iconify" data-icon="fa-solid:dumbbell" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Training</a>
+<li><a href="voeding.html"><span class="iconify" data-icon="mdi:food-fork-drink" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Voeding & Supplementen</a>
+<li><a href="overmij.html"><span class="iconify" data-icon="ion:ios-contact" data-inline="false" style="font-size:20px"></span>&nbsp;&nbsp;&nbsp;Over Mij</a>
+<li><a href="contact.html"><span class="iconify" data-icon="ion:md-contact" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Contact</a>
+
+</ul>
+
+<div class="main-content">
+
+<ul class="category-title">
+
+<li><button class='tog-button' onclick="showContent()">Spiermassa</button></li>
+
+<li><button class='tog-button' onclick="showContent2()">Afvallen</button></li>
+
+</ul>
+
+<div class="category" id="content">
+
+<div class="change-theme">
+<font size=4>
+<b>Kleur:</b> 
+<button class="change-theme-color-button" style="background-color:white; color:white" onclick="changeColor2()"></button>
+<button class="change-theme-color-button" style="background-color:black; color:black;" onclick="changeColor1()"></button>
+<button class="change-theme-color-button" style="background-color:rgba(0,136,255,0.75); color:rgba(0,136,255,0.75)" onclick="changeColor3()"></button>
+<button class="change-theme-color-button" style="background-color:rgba(0,135,10,0.75); color:rgba(0,135,10,0.75)" onclick="changeColor4()"></button>
+<button class="change-theme-color-button" style="background-color:rgba(175,0,0,0.75); color:rgba(175,0,0,0.75)" onclick="changeColor5()"></button>
+<button class="change-theme-color-button" style="background-color:rgba(255,247,0,0.75); color:rgba(255,247,0,0.75)" onclick="changeColor6()"></button>
+</font>
+</div>
+
+<div class="change-theme">
+<font size=4>
+&nbsp;<b>Grootte:</b>
+<button class="change-theme-size-button" style="font-size: 13px;" onclick="changeSize1()"><b>1</b></button>
+<button class="change-theme-size-button" style="font-size: 16px;" onclick="changeSize2()"><b>2</b></button>
+<button class="change-theme-size-button" style="font-size: 18px;" onclick="changeSize3()"><b>3</b></button>
+<button class="change-theme-size-button" style="font-size: 20px;" onclick="changeSize4()"><b>4</b></button>
+</font>
+</div>
+
+<div class="category-content">
+
+<div class="text">
+
+<p><b><font size=6>Spiermassa opbouwen</font></b> 
+<br><br>Stevige armen en goed zichtbare buikspieren: dat is het droom van veel mensen, en dat is waar velen de sportschool voor induiken.
+Maar hoe kan dat droom tot realiteit komen ?
+<br>Spiermassa opbouwen wordt gedaan door de combinatie van krachttraining, juiste voeding en voldoende rust.</p>
+
+<p><b><font size=6>Spiermassa en spierherstel</font></b> 
+<br><br>Om te begrijpen hoe je spiermassa opbouwt, zul je natuurlijk moeten begrijpen hoe spiergroei precies in zijn werk gaat.
+Om je spieren te laten groeien, moet je ze namelijk eerst licht beschadigen. 
+Dit doe je door te trainen: als je je heel sterk inspant, ontstaan er minuscule scheurtjes in het spierweefsel.
+
+<br><br>Dat klinkt gelukkig ernstiger dan het is. 
+Je lichaam herstelt zich achteraf weer, en doet dat door je spieren een klein beetje sterker te repareren dan ze eerst waren. 
+Op die manier bouw je dus na iedere training nét wat meer kracht en spiermassa op!</p>
+
+<p><b><font size=6>De juiste oefeningen</font></b> 
+<br><br>Als je een trainingsschema opstelt, is het kiezen van de juiste oefeningen natuurlijk van belang. 
+Het is daarbij het efficiëntst om zo veel mogelijk voor samengestelde oefeningen te gaan, zoals de squat, deadlift en de bench press. 
+Daarmee spreek je meerdere spiergroepen in één beweging aan, en train je dus meer spiermassa op hetzelfde moment.
+
+<br><br>Let er verder op dat in jouw fitnessschema alle spiergroepen aan bod komen. 
+Je wilt niet eindigen met bijvoorbeeld brede schouders en dunne beentjes.
+
+<br><br>Je kunt een paar voorbeelden van trainingsschema's zien op de Training pagina.</p>
+
+<p><b><font size=6>Progressieve belasting</font></b> 
+<br><br>Heb je eenmaal een sportschema opgesteld, dan is het belangrijk dat het daar niet bij blijft. 
+Je zult je vanuit dat eerste schema steeds verder moeten ontwikkelen! 
+Je lichaam wordt immers steeds sterker, waardoor gewichten die ooit uitdagend waren, heel makkelijk zullen gaan. 
+En daar breng je natuurlijk niet de benodigde spierschade mee toe.
+
+<br><br>Je zult het jezelf dus steeds opnieuw moeilijk moeten maken. 
+Dat hoeft niet alleen te betekenen dat je steeds zwaardere gewichten gebruikt. 
+Ook andere factoren kunnen een rol spelen, zoals het aantal herhalingen of de duur van je rustpauzes. 
+Wat je ook doet, zorg dat je training niet week in week uit hetzelfde is. 
+Bij jezelf uitdagen! Dat klinkt misschien logisch, maar veel mensen lopen hier al in het begin op stuk.</p>
+
+<p><b><font size=6>Voldoende rust</font></b> 
+<br><br>Het laatste waar je in je trainingsschema op moet letten, is de hoeveelheid rust die je neemt. 
+Dat klinkt misschien wat vreemd; je trainingen zijn immers de momenten waarop je wél bezig bent. 
+Toch is de hersteltijd die je neemt een essentiële voorwaarde voor succes. 
+Dat is logisch als je je realiseert dat spiergroei vooral een kwestie van ‘schadeherstel’ is.
+
+<br><br>Je spieren groeien niet door het trainen, maar door het herstel tussen de trainingen. 
+Er moet daarom altijd minimaal 48 uur tussen twee trainingen van dezelfde spiergroep zitten, en bij sommige sporters zelfs meer. 
+Je kunt wel trainingen sneller achter elkaar plannen, maar doe dat dan voor verschillende spiergroepen.</p>
+
+<p><b><font size=6>Voeding</font></b> 
+<br><br>De voeding speelt ook een hele belangrijke rol bij het opbouwen van spiermassa. 
+Om spiermassa op te bouwen, heb je natuurlijk voldoende bouwstoffen nodig. 
+Je moet immers nieuw lichaamsweefsel opbouwen, en dat moet ergens vandaan komen. 
+Om die reden heb je een calorieoverschot nodig om meer spiermassa op te kunnen bouwen. 
+Natuurlijk moetje daarbij niet helemaal overboord gaan: je eet wat meer, maar ook geen kilo’s en kilo’s.
+
+<br><br>Gemiddeld is een overschot van ongeveer 10 tot 20% van je caloriebehoefte ongeveer goed. 
+Dat betekent voor de meeste mensen 300 tot 500 calorieën extra per dag. 
+Je hoeft het natuurlijk niet iedere dag gedetailleerd bij te houden, maar hou er een oogje op! 
+
+<br><br>Je kunt een paar voorbeelden van voedingsschema's zien op de Voeding pagina. </p>
+
+</div>
+
+<div class="images">
+
+<img src="images/spiermassa3.jpg" style="width: 550px; height: 300px;">
+
+<br><br><br><img src="images/spiermassa2.jpg" style="width: 550px; height: 300px">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="category" id="content2">
+
+<div class="change-theme">
+<font size=4>
+<b>Kleur:</b> 
+<button class="change-theme-color-button" style="background-color:white; color:white" onclick="changeColor2()"></button>
+<button class="change-theme-color-button" style="background-color:black; color:black;" onclick="changeColor1()"></button>
+<button class="change-theme-color-button" style="background-color:rgba(0,136,255,0.75); color:rgba(0,136,255,0.75)" onclick="changeColor3()"></button>
+<button class="change-theme-color-button" style="background-color:rgba(0,135,10,0.75); color:rgba(0,135,10,0.75)" onclick="changeColor4()"></button>
+<button class="change-theme-color-button" style="background-color:rgba(175,0,0,0.75); color:rgba(175,0,0,0.75)" onclick="changeColor5()"></button>
+<button class="change-theme-color-button" style="background-color:rgba(255,247,0,0.75); color:rgba(255,247,0,0.75)" onclick="changeColor6()"></button>
+</font>
+</div>
+
+<div class="change-theme">
+<font size=4>
+&nbsp;<b>Grootte:</b>
+<button class="change-theme-size-button" style="font-size: 13px;" onclick="changeSize1()"><b>1</b></button>
+<button class="change-theme-size-button" style="font-size: 16px;" onclick="changeSize2()"><b>2</b></button>
+<button class="change-theme-size-button" style="font-size: 18px;" onclick="changeSize3()"><b>3</b></button>
+<button class="change-theme-size-button" style="font-size: 20px;" onclick="changeSize4()"><b>4</b></button>
+</font>
+</div>
+
+<div class="category-content">
+
+<div class="text">
+
+<p><b><font size=6>Afvallen</font></b>
+<br><br>Wil je snel afvallen ? Dan ben je zeker niet de enige! 
+Veel mensen beginnen vlak voor een speciale gelegenheid of een vakantie nog even aan een snel dieet, 
+die krankzinnige resultaten als 5 kilo afvallen per week beloven. Maar is dat nou echt realistisch?
+Het slechte nieuws: veel van die mensen slagen er niet in om ook echt slanker te worden of te blijven.
+
+<br><br>Wil je echt een zichtbaar resultaat zien? 
+Dan zul je de valkuilen uit de meest gehoorde adviezen moeten vermijden. 
+Hier leg ik je uit hoe je gewicht kunt verliezen, en hoe snel dat kan.
+
+<br><br><b><font size=5>Gewichtsverlies vs. vetverlies</font></b>
+
+<br><br>Eerst even een algemeen punt over gewichtsverlies. 
+Bij diëten hebben we het vaak over wat de weegschaal zegt. 
+De meeste mensen willen echter niet per se lichter worden, maar vooral slanker! 
+Hoewel veel mensen denken dat dat hetzelfde is, is dat zeker niet het geval.
+
+<br><br>Je kunt namelijk makkelijk veel gewicht verliezen zonder vet kwijt te raken. 
+Met een koolhydraatarm dieet, bijvoorbeeld, raak je vooral vocht kwijt. 
+Dat geeft gauw resultaat op de weegschaal, maar met het blote oog zie je weinig verschil! 
+Omgekeerd word je vaak wat zwaarder als je meer spieren opbouwt – maar zie je er dan juist slanker uit.
+
+<br><br>Kortom: let erop dat je je doel op de juiste manier opstelt. 
+Ja, je wilt snel afvallen, maar daarvoor is de weegschaal niet altijd je beste hulpmiddel! 
+In plaats daarvan kun je beter focussen op zichtbaar resultaat, en dus op vetverlies.
+
+<br><br><b><font size=5>Hoeveel calorieën per kilo ?</font></b>
+
+<br><br>Vet verlies je door meer calorieën te verbranden dan je binnenkrijgt. 
+Je dwingt je lichaam dan namelijk om de reserves in je vetweefsel aan te spreken voor voldoende energie. 
+Dat tekort kun je tot stand brengen door minder te eten, of door meer te bewegen en zo meer te verbranden.
+
+<br><br>Om een kilo vet kwijt te raken, moet je ongeveer 7.500 calorieën (7.777 kcal om preciezer te zijn) meer verbranden dan je eet. 
+Dat is een ruwe schatting – vaak wordt er ook wat spierweefsel verbrand, wat het getal beïnvloedt. 
+Ook andere fysieke factoren kunnen invloed hebben. 
+Als vuistregel is het echter een prima hoeveelheid om vanuit te gaan en mee te rekenen.
+
+<br><br><b><font size=5>Dus: hoe snel gewicht verliezen?</font></b>
+
+<br><br>Blijft de vraag natuurlijk: hoe snel kun je afvallen als je het wél realistisch aanpakt? 
+Een goede vuistregel is om een calorietekort te creëren dat maximaal 20% van je energieverbruik is. 
+Bij een verbruik van 2.500 calorieën per dag eet je bijvoorbeeld 2000 calorieën, zodat het tekort 500 calorieën is.
+Een snelle rekensom leert dat je met 500 calorieën ongeveer een halve kilo vetweefsel per week kunt verbranden.
+
+<br><br><br><b><font size=6>Snel afvallen: dieet tips</font></b>
+
+<br><br>Kortom: als je snel afvallen goed aanpakt, gaat het nooit zo snel als je stiekem zou willen. 
+Dat is goed. Hou in gedachten dat dit de enige manier is om er écht beter uit te gaan zien, 
+zonder dat je na een jaar weer terug bent op je huidige gewicht!
+
+<br><br>En hoe doe je dat dan, gezond snel afvallen? De volgende 10 tips vormen de basis.
+
+<br><br><b><font size=5>1. Een calorietekort van 20%</font></b>
+<br><br>Om af te vallen, heb je een calorietekort nodig. Zo dwing je je lichaam om vet te gaan verbranden om genoeg energie vrij te maken. Een te groot energietekort is echter ongezond: dan verlies je spierweefsel en loop je tekorten aan voedingsstoffen op.
+
+<br><br>Ongeveer 20% onder je energiebehoefte is het maximale energietekort dat we nog aanraden. Hoe veel dat is, kun je bijvoorbeeld berekenen met onze online tool. Als je daarin voor de optie afvallen kiest, berekent hij hoeveel calorieën je per dag ongeveer moet eten.
+
+<br><br><b><font size=5>2. Eet eiwitten</font></b>
+<br><br>Nee, je hoeft niet opeens koolhydraatarm te gaan eten. Zoals gezegd: dat zorgt vooral voor vochtverlies, en niet per se voor vetverbranding. Dat calorietekort is belangrijker dan de precieze samenstelling van je macro’s.
+
+<br><br>Toch loont het de moeite om genoeg eiwitten te eten. Die zorgen voor meer verzadiging en helpen je daarom om ‘vanzelf’ minder te eten. Daarnaast zijn eiwitten essentieel voor spiergroei. Onder punt 8 lees je waarom dat zo belangrijk is om snel afvallen mogelijk te maken!
+
+<br><br><b><font size=5>3. Vergeet de vetten niet</font></b>
+<br><br>Ook heeft je lichaam (gezonde) vetten nodig. Vetten zijn net als koolhydraten een belangrijke leverancier van energie en zijn verantwoordelijk voor tal van essentiële lichaamsfuncties. Deze gezonde vetten zitten o.a. in vis, noten, avocado, olijfolie, kokosolie etc.
+<br><br>Gezonde vetten, ook wel de onverzadigde vetten, verlagen o.a. het cholesterol gehalte in je bloed, helpen bij de opname van vitamines en stimuleren de aanmaak van diverse hormonen.
+
+<br><br><b><font size=5>4. Geen toegevoegde suikers</font></b>
+<br><br>Als je minder mag eten, wil je nog steeds wel een verzadigd gevoel hebben. Toegevoegde suikers zijn vanuit dat oogpunt een slecht idee: ze leveren wél extra calorieën, maar zorgen alleen maar voor meer trek. Laat frisdranken, gebak, snoep en veel kant-en-klare producten dus lekker zitten.
+
+<br><br><b><font size=5>5. Wel veel vezels</font></b>
+<br><br>Voor vezels geldt het omgekeerde: die leveren praktisch geen calorieën, maar vullen juist wél behoorlijk. Om die reden is 2-3 stuks fruit per dag nog steeds een aanrader, ook al krijg je daar ook wat suikers mee binnen. (Vruchtensap bevat geen vezels, dus dat weer liever niet). Kies verder zo veel mogelijk voor volkoren in plaats van witte koolhydraten.
+
+<br><br><b><font size=5>6. Carb cycling</font></b>
+<br><br>Je hoeft echt niet per se koolhydraatarm te gaan eten als je af wilt vallen. Wel geldt dat je op koolhydraten vaak makkelijk calorieën kunt bezuinigen. Je hebt er namelijk niet per se een minimale hoeveelheid van nodig, zoals bij vetten en eiwitten. Aan de andere kant wil je op ‘sportdagen’ genoeg koolhydraten binnenkrijgen om energie te leveren.
+
+<br><br>Carb cycling wil in feite zeggen: op dagen dat je traint, eet je iets meer calorieën door wat extra koolhydraten te eten. Op rustdagen, daarentegen, verminder je het totale aantal calorieën door een deel van die koolhydraten weg te laten.
+
+<br><br><b><font size=5>7. Probeer intermittent fasting</font></b>
+<br><br>Een andere optie is intermittent fasting – korte periodes vasten. Deze aanpak werkt niet voor iedereen. Maar kun jij een variant vinden die op jouw lichaam aansluit? Dan is dit wel een uitstekende manier om een calorietekort te creëren zonder honger te lijden.
+
+<br><br>IF hoeft niet per se te betekenen dat je dagenlang niet eet. Je kunt ook niets eten tussen 19:00 ’s avonds en 11:00 ’s ochtends, bijvoorbeeld. Ook op die manier eet je pers saldo meestal minder.
+
+<br><br><b><font size=5>8. Vervang je snacks</font></b>
+<br><br>Op zoek naar een snelle manier om calorieën te besparen? Bekijk je tussendoortjes eens goed. Veel mensen eten drie gezonde maaltijden per dag, en verpesten de boel dan door te veel te snacken. Een bakje chips of een paar koekjes leveren al snel honderden kcal.
+
+<br><br>Dat wil niet zeggen dat je helemaal niet mag snacken; het is alleen verstandig om ánders te snacken. Groente en fruit zijn heel caloriearme opties. Ook volkoren crackers met mager beleg zijn bijvoorbeeld een prima mogelijkheid.
+
+<br><br><b><font size=5>9. Drink veel water</font></b>
+<br><br>Ironisch genoeg gaat je lichaam meer water opslaan wanneer je te weinig drinkt. Dat leidt tot gewichtstoename en een wat ‘pafferig’ opgezet gezicht. Niet gezond en niet goed voor je strakke lichaam, dus. Om die reden is het belangrijk om dagelijks zo’n twee liter te drinken.
+
+<br><br>En let op: zorg dat dat vocht vooruit uit water, thee en eventueel een paar koppen koffie komt. Dranken als frisdrank, vruchtensap en alcohol leveren veel calorieën en vullen voor geen meter. Die kun je dus maar beter vermijden.
+
+<br><br><b><font size=5>10. Niet vol, maar verzadigd</font></b>
+<br><br>Veel mensen eten chronisch meer dan ze nodig hebben – en meer dan ze denken. Dat komt deels omdat we in onze samenleving een behoorlijk verstoord beeld van voeding hebben. We eten graag tot we propvol zitten, en dat elke maaltijd weer opnieuw. Geen wonder dat je daarmee aankomt!
+
+<br><br>Probeer in plaats daarvan eens standaard voor 80% verzadiging te gaan. Je hebt op dat moment genoeg gegeten om een paar uur geen honger meer te krijgen. Aan de andere kant heb je nog niet het gevoel dat je ieder moment uit je broek kunt barsten…
+
+<br><br><b><font size=5>11. Begin aan krachttraining</font></b>
+<br><br>Snel afvallen is voor ongeveer 80% afhankelijk van je voeding. Je kunt die overige 20% echter nog wel een zetje geven door ook te sporten. En nee, dan hoef je niet per se te gaan hardlopen! Sterker nog: krachttraining is vaak een stuk effectiever.
+
+<br><br>Daar zijn verschillende redenen voor. Zo levert krachtsport meer naverbranding op. Ook versnelt spierweefsel je stofwisseling, waardoor je de hele dag door meer calorieën verbrandt. Zelfs in rust! Een laatste voordeel is dat je er met meer spieren al snel veel strakker uitziet.
+
+<br><br><b><font size=5>12. Doe HIIT</font></b>
+<br><br>Wil je toch hardlopen, of wil je naast die krachttraining wat extra cardio doen? Kijk dan eens of HIIT iets voor jou is. Het idee van intervaltraining is heel simpel: je wisselt korte inspanningen af met rustperiodes. Zo kun je veel intensiever bewegen dan bij duurtraining.
+
+<br><br>Met HIIT bespaar je flink wat tijd – je hoeft immers geen uren op die loopband te blijven staan. Bovendien voorkom je met die korte trainingen dat je lichaam te veel stresshormoon aanmaakt, ook dat is nadelig voor je gewichtsverlies.
+
+<br><br><b><font size=5>13. Alle beetjes helpen</font></b>
+<br><br>Ten slotte: niets verbrandt beter calorieën dan heel veel kleine beetjes. Natuurlijk, je kunt de hele dag achter je bureau en op de bank zitten, en dan één uurtje heel hard gaan trainen. Maar wil je echt snel calorieën verbranden? Dan valt er veel meer winst te behalen in de rest van de dag!
+
+<br><br>Stap dus zo vaak mogelijk op de fiets, of ga lopen als je bestemming toch in de buurt is. Kies nooit voor de lift als je ook voor de trap kunt kiezen. Maak een wandelingetje na de lunch – dat is nog goed voor de spijsvertering ook. Je zult merken dat je je een stuk fitter gaat voelen!
+
+<br><br><b><font size=5>14. Slaap voldoende</font></b>
+<br><br>En dan nog een onverwachte tip om snel afvallen makkelijker te maken: zorg voor genoeg slaap! Als je moe en gestrest bent, maakt je lichaam meer cortisol aan, het stresshormoon. Dat zorgt voor extra vetopslag en meer spierafbraak.
+
+<br><br>Daarnaast krijg je meer trek als je weinig slaapt, en gaat je zelfbeheersing achteruit… Het zal duidelijk zijn dat dat een gevaarlijke combinatie is. Snel afvallen betekent dus ook dat je lekker op tijd je bed in duikt!
+
+</p>
+
+</div>
+
+<div class="images">
+
+<img src="images/afvallen3.jpg">
+
+<br><br><br><img src="images/afvallen1.jpg">
+
+<br><br><br><img src="images/afvallen2.jpg">
+
+</div>
+
+</div>
+
+</div>
+
+<script src='//code.jquery.com/jquery-2.0.0.js'></script>
+<script>
+
+var hint = document.getElementById('content');
+var hint2 = document.getElementById('content2');
+
+function showContent() {
+  if(hint2.style.visibility == 'visible')
+  {
+	hint2.style.visibility = 'hidden';
+    	hint2.style.opacity = '0';
+	hint2.style.height = '0';
+	hint2.style.padding = '0';
+
+	setTimeout(showContent, 700);
+  }
+  else 
+  {
+  	if(hint.style.visibility == 'visible')
+  	{
+    		hint.style.visibility = 'hidden';
+    		hint.style.opacity = '0';
+		hint.style.height = '0';
+  	}
+  	else
+  	{
+    		hint.style.visibility = 'visible';
+    		hint.style.opacity = '1';
+		hint.style.height = '700px';
+  	}
+  }
+}
+
+function showContent2() {
+  if(hint.style.visibility == 'visible')
+  {
+	hint.style.visibility = 'hidden';
+    	hint.style.opacity = '0';
+	hint.style.height = '0';
+	hint.style.padding = '0';
+
+	setTimeout(showContent2, 700);
+  }
+  else
+  {
+  	if(hint2.style.visibility == 'visible')
+  	{
+    		hint2.style.visibility = 'hidden';
+    		hint2.style.opacity = '0';
+		hint2.style.height = '0';
+  	}
+  	else
+  	{
+    		hint2.style.visibility = 'visible';
+    		hint2.style.opacity = '1';
+		hint2.style.height = '700px';
+  	}
+  }
+}
+
+function changeSize1()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.fontSize = '13px';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.fontSize = '13px';
+	}
+}
+
+function changeSize2()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.fontSize = '16px';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.fontSize = '16px';
+	}
+}
+
+function changeSize3()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.fontSize = '18px';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.fontSize = '18px';
+	}
+}
+
+function changeSize4()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.fontSize = '20px';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.fontSize = '20px';
+	}
+}
+
+
+function changeColor1()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = '#E0E0E0';
+		hint.style.backgroundColor = 'black';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = '#E0E0E0';
+		hint2.style.backgroundColor = 'black';
+	}
+}
+
+function changeColor2()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = 'black';
+		hint.style.backgroundColor = 'rgba(238, 238, 238, 0.8)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = 'black';
+		hint2.style.backgroundColor = 'rgba(238, 238, 238, 0.8)';
+	}
+}
+
+function changeColor3()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = '#E0E0E0';
+		hint.style.backgroundColor = 'rgba(0, 130, 235, 0.75)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = '#E0E0E0';
+		hint2.style.backgroundColor = 'rgba(0, 130, 235, 0.75)';
+	}
+}
+
+function changeColor4()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = '#E0E0E0';
+		hint.style.backgroundColor = 'rgba(0, 135, 10, 0.75)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = '#E0E0E0';
+		hint2.style.backgroundColor = 'rgba(0, 135, 10, 0.75)';
+	}
+}
+
+function changeColor5()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = '#E0E0E0';
+		hint.style.backgroundColor = 'rgba(175, 0, 0, 0.75)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = '#E0E0E0';
+		hint2.style.backgroundColor = 'rgba(175, 0, 0, 0.75)';
+	}
+}
+
+function changeColor6()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = 'black';
+		hint.style.backgroundColor = 'rgba(255, 247, 0, 0.75)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = 'black';
+		hint2.style.backgroundColor = 'rgba(255, 247, 0, 0.75)';
+	}
+}
+
+</script>
+
+</body>
+
+</html>

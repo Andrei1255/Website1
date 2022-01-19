@@ -1,0 +1,199 @@
+<html>
+
+<head>
+
+	<title>
+		Training	</title>
+
+	<style>
+
+	body {
+		background-image: url("images/gym-banner5.jpg");
+		background-position: ;
+		background-attachment: fixed;
+		background-size: cover;
+		margin: 0;
+		
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.listt {
+  		list-style-type: none;
+		top: 0;
+  		margin: 0;
+  		padding: 5px 0px 5px 10px;
+  		overflow: hidden;
+  		background-color: #1B1B1B;
+		opacity: 1;	
+	}
+
+	.listt a {
+		float: left;
+		text-align: center;
+		color: #DDDDDD;
+		border: 1px solid #1B1B1B;
+		border-radius: 2px;
+		padding: 15px 25px 15px 25px;
+		display: block;
+		font-family: "Courier New";
+		font-size: 17px;
+	}
+
+	.listt a:hover {
+		color: white;
+		background-color: #171717;
+	}
+
+	.listt a .iconify {
+		position: absolute;	
+	}
+
+	.main-content {
+		box-shadow: 0px 0px 4px 1px rgba(0,0,0,1);
+		background-color: rgba(238, 238, 238, 0.8);
+		border-radius: 3px;
+		margin-left: 100px;
+		margin-right: 118px;
+		margin-top: 40px;
+		width: 88%;
+		display: inline-block;
+		
+	}
+
+	input[type=text], select, textarea 
+	{
+  		width: 300px;
+  		padding: 12px;
+  		border: 1px solid #aaa;
+  		border-radius: 4px;
+  		box-sizing: border-box;
+  		margin-top: 6px;
+  		margin-bottom: 16px;
+  		resize: both;
+	}
+
+	input[type=submit] 
+	{
+ 	 	background-color: #4CAF50;
+ 	 	color: white;
+  		padding: 12px 20px;
+  		border: none;
+  		border-radius: 4px;
+  		cursor: pointer;
+	}
+
+	input[type=submit]:hover 
+	{
+  		background-color: #45a049;
+	}
+
+	.container 
+	{
+  		border-radius: 5px;
+  		padding: 20px;
+		float:left;
+	}
+
+	.test {
+		margin-top: 50px;
+		margin-left: 800px;
+	}
+
+	#map {
+		width: 100px;
+		height:100px;
+	}
+			
+	</style>
+
+<script src="https://code.iconify.design/1/1.0.0-rc6/iconify.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="shortcut icon" href="images/logo.ico" />
+
+</head>
+
+<body>
+
+
+<ul class="listt">
+
+<li><a href="index.html"><span class="iconify" data-icon="ant-design:home" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Home</a>
+<li><a href="informatie.html"><span class="iconify" data-icon="entypo:info-with-circle" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Informatie</a>
+<li><a href="training-spiermassa.html"><span class="menu"><span class="iconify" data-icon="fa-solid:dumbbell" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Training</a>
+<li><a href="voeding.html"><span class="iconify" data-icon="mdi:food-fork-drink" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Voeding & Supplementen</a>
+<li><a href="overmij.html"><span class="iconify" data-icon="ion:ios-contact" data-inline="false" style="font-size:20px"></span>&nbsp;&nbsp;&nbsp;Over Mij</a>
+<li><a href="contact.html"><span class="iconify" data-icon="ion:md-contact" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Contact</a>
+
+</ul>
+
+<div class="main-content">
+
+<div class="container">
+  <form action="mailto:andrei_p01@yahoo.com">
+    <label for="fname">Naam</label>
+    <br><input type="text" id="fname" name="firstname" placeholder="Je naam..">
+
+    <br><label for="lname">Achternaam</label>
+    <br><input type="text" id="lname" name="lastname" placeholder="Je achternaam..">
+
+    <br><label for="country">Land</label>
+    <br><select id="country" name="country">
+      	<option value="Nederland">Nederland</option>
+      	<option value="Belgie">Belgie</option>
+	<option value="Verenigde Staten">Verenigde Staten</option>
+      	<option value="England">England</option>
+	<option value="Frankrijk">Frankrijk</option>
+	<option value="Spanje">Spanje</option>
+	<option value="Italie">Italie</option>
+	<option value="Duitsland">Duitsland</option>
+	<option value="Turkije">Turkije</option>
+	<option value="Roemenie">Roemenie</option>
+    </select>
+
+    <br><label for="subject">Onderwerp</label>
+    <br><input type="text" id="subject" name="subject" placeholder="Het onderwerp..">
+
+    <br><label for="text">Bericht</label>
+    <br><textarea id="text" name="text" placeholder="Schrijf uw bericht hier.." style="height:200px; width: 500px;"></textarea>
+
+    <br><input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="test">
+
+<font size=4><br>Telefoonnummer: 0640773231</font>
+
+<br><div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

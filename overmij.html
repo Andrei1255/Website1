@@ -1,0 +1,419 @@
+<html>
+
+<head>
+
+	<title>
+		Training	</title>
+
+	<style>
+
+	body {
+		background-image: url("images/gym-banner5.jpg");
+		background-position: ;
+		background-attachment: fixed;
+		background-size: cover;
+		margin: 0;
+		
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.listt {
+  		list-style-type: none;
+		top: 0;
+  		margin: 0;
+  		padding: 5px 0px 5px 10px;
+  		overflow: hidden;
+  		background-color: #1B1B1B;
+		opacity: 1;	
+	}
+
+	.listt a {
+		float: left;
+		text-align: center;
+		color: #DDDDDD;
+		border: 1px solid #1B1B1B;
+		border-radius: 2px;
+		padding: 15px 25px 15px 25px;
+		display: block;
+		font-family: "Courier New";
+		font-size: 17px;
+	}
+
+	.listt a:hover {
+		color: white;
+		background-color: #171717;
+	}
+
+	.listt a .iconify {
+		position: absolute;	
+	}
+
+	.main-content {
+		box-shadow: 0px 0px 4px 1px rgba(0,0,0,1);
+		
+		border-radius: 3px;
+		margin-left: 100px;
+		margin-right: 118px;
+		margin-top: 40px;
+		
+	}
+
+	.category {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+	}
+
+	.category li {
+		display: inline;
+	}
+
+	.tog-button {
+		float: left;
+		display: block;
+		background-color: rgba(238, 238, 238, 0.8);
+		box-shadow: 0px 0px 1px 0px black;
+		border: 1px solid black;
+		border-radius: 3px;
+		padding: 10px 256px 10px 256px;
+    		cursor: pointer;
+    		outline: none;
+		font-size: 40px;
+		font-family: "Lucida Console";
+		width: 50%;
+		text-align: center;
+		
+	}
+
+	.tog-button:hover {
+		background-color: rgba(240, 240, 240, 0.9);
+	}
+
+
+	.category-content1 {
+		background-color: rgba(238, 238, 238, 0.8);
+		visibility: hidden;
+		height: 0px;
+		margin: 0;
+		overflow: auto;
+		transition: visibility 0.8s, opacity 0.8s, height 0.8s;
+		opacity: 0;
+		border-bottom: 1px solid black;
+		box-shadow: 0px 0px 1px 0px black;
+	}
+
+	.category-content1 p {
+		max-width: 550px;
+		padding-left: 20px;
+		font-size: 17px;
+	}
+
+	.change-theme {
+		border-bottom: 1px solid black;
+		border-right: 1px solid black;
+		display: table-cell;
+		padding: 2px 8px 2px 4px;
+	}
+
+	.change-theme-button {
+		cursor: pointer;
+		outline: none;
+		border: none;
+		width: 17px;
+		height: 15px;
+	}
+			
+	</style>
+
+<script src="https://code.iconify.design/1/1.0.0-rc6/iconify.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="shortcut icon" href="images/logo.ico" />
+
+</head>
+
+<body>
+
+
+<ul class="listt">
+
+<li><a href="index.html"><span class="iconify" data-icon="ant-design:home" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Home</a>
+<li><a href="informatie.html"><span class="iconify" data-icon="entypo:info-with-circle" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Informatie</a>
+<li><a href="training-spiermassa.html"><span class="menu"><span class="iconify" data-icon="fa-solid:dumbbell" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Training</a>
+<li><a href="voeding.html"><span class="iconify" data-icon="mdi:food-fork-drink" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Voeding & Supplementen</a>
+<li><a href="overmij.html"><span class="iconify" data-icon="ion:ios-contact" data-inline="false" style="font-size:20px"></span>&nbsp;&nbsp;&nbsp;Over Mij</a>
+<li><a href="contact.html"><span class="iconify" data-icon="ion:md-contact" data-inline="false"></span>&nbsp;&nbsp;&nbsp;Contact</a>
+
+</ul>
+
+<div class="main-content">
+
+<ul class="category">
+
+<li><button class='tog-button' onclick="showContent()">Spiermassa</button></li>
+
+<li><button class='tog-button' onclick="showContent2()">Afvallen</button></li>
+
+</ul>
+
+<div class="category-content1" id="content">
+
+<div class="change-theme">
+<font size=4>
+<b>Kleur:</b> 
+<button class="change-theme-button" style="background-color:white; color:white" onclick="changeColor2()"></button>
+<button class="change-theme-button" style="background-color:black; color:black;" onclick="changeColor1()"></button>
+<button class="change-theme-button" style="background-color:rgba(0,136,255,0.75); color:rgba(0,136,255,0.75)" onclick="changeColor3()"></button>
+<button class="change-theme-button" style="background-color:rgba(0,135,10,0.75); color:rgba(0,135,10,0.75)" onclick="changeColor4()"></button>
+<button class="change-theme-button" style="background-color:rgba(175,0,0,0.75); color:rgba(175,0,0,0.75)" onclick="changeColor5()"></button>
+<button class="change-theme-button" style="background-color:rgba(255,247,0,0.75); color:rgba(255,247,0,0.75)" onclick="changeColor6()"></button>
+</font>
+</div>
+
+<p><b><font size=6>Spiermassa opbouwen</font></b> 
+<br><br>Stevige armen en goed zichtbare buikspieren: dat is het droom van veel mensen, en dat is waar velen de sportschool voor induiken.
+Maar hoe kan dat droom tot realiteit komen ?
+<br>Spiermassa opbouwen wordt gedaan door de combinatie van krachttraining, juiste voeding en voldoende rust.</p>
+
+<p><b><font size=6>Spiermassa en spierherstel</font></b> 
+<br><br>Om te begrijpen hoe je spiermassa opbouwt, zul je natuurlijk moeten begrijpen hoe spiergroei precies in zijn werk gaat.
+Om je spieren te laten groeien, moet je ze namelijk eerst licht beschadigen. 
+Dit doe je door te trainen: als je je heel sterk inspant, ontstaan er minuscule scheurtjes in het spierweefsel.
+
+<br><br>Dat klinkt gelukkig ernstiger dan het is. 
+Je lichaam herstelt zich achteraf weer, en doet dat door je spieren een klein beetje sterker te repareren dan ze eerst waren. 
+Op die manier bouw je dus na iedere training nét wat meer kracht en spiermassa op!</p>
+
+<p><b><font size=6>De juiste oefeningen</font></b> 
+<br><br>Als je een trainingsschema opstelt, is het kiezen van de juiste oefeningen natuurlijk van belang. 
+Het is daarbij het efficiëntst om zo veel mogelijk voor samengestelde oefeningen te gaan, zoals de squat, deadlift en de bench press. 
+Daarmee spreek je meerdere spiergroepen in één beweging aan, en train je dus meer spiermassa op hetzelfde moment.
+
+<br><br>Let er verder op dat in jouw fitnessschema alle spiergroepen aan bod komen. 
+Je wilt niet eindigen met bijvoorbeeld brede schouders en dunne beentjes.</p>
+
+<p><b><font size=6>Progressieve belasting</font></b> 
+<br><br>Heb je eenmaal een sportschema opgesteld, dan is het belangrijk dat het daar niet bij blijft. 
+Je zult je vanuit dat eerste schema steeds verder moeten ontwikkelen! 
+Je lichaam wordt immers steeds sterker, waardoor gewichten die ooit uitdagend waren, heel makkelijk zullen gaan. 
+En daar breng je natuurlijk niet de benodigde spierschade mee toe.
+
+<br><br>Je zult het jezelf dus steeds opnieuw moeilijk moeten maken. 
+Dat hoeft niet alleen te betekenen dat je steeds zwaardere gewichten gebruikt. 
+Ook andere factoren kunnen een rol spelen, zoals het aantal herhalingen of de duur van je rustpauzes. 
+Wat je ook doet, zorg dat je training niet week in week uit hetzelfde is. 
+Bij jezelf uitdagen! Dat klinkt misschien logisch, maar veel mensen lopen hier al in het begin op stuk.</p>
+
+<p><b><font size=6>Voldoende rust</font></b> 
+<br><br>Het laatste waar je in je trainingsschema op moet letten, is de hoeveelheid rust die je neemt. 
+Dat klinkt misschien wat vreemd; je trainingen zijn immers de momenten waarop je wél bezig bent. 
+Toch is de hersteltijd die je neemt een essentiële voorwaarde voor succes. 
+Dat is logisch als je je realiseert dat spiergroei vooral een kwestie van ‘schadeherstel’ is.
+
+<br><br>Je spieren groeien niet door het trainen, maar door het herstel tussen de trainingen. 
+Er moet daarom altijd minimaal 48 uur tussen twee trainingen van dezelfde spiergroep zitten, en bij sommige sporters zelfs meer. 
+Je kunt wel trainingen sneller achter elkaar plannen, maar doe dat dan voor verschillende spiergroepen.</p>
+
+<p><b><font size=6>Voeding</font></b> 
+<br><br>De voeding speelt ook een hele belangrijke rol bij het opbouwen van spiermassa. 
+Om spiermassa op te bouwen, heb je natuurlijk voldoende bouwstoffen nodig. 
+Je moet immers nieuw lichaamsweefsel opbouwen, en dat moet ergens vandaan komen. 
+Om die reden heb je een calorieoverschot nodig om meer spiermassa op te kunnen bouwen. 
+Natuurlijk moet je daarbij niet helemaal overboord gaan: je eet wat meer, maar ook geen kilo’s en kilo’s.
+
+<br><br>Gemiddeld is een overschot van ongeveer 10 tot 20% van je caloriebehoefte ongeveer goed. 
+Dat betekent voor de meeste mensen 300 tot 500 calorieën extra per dag. 
+Je hoeft het natuurlijk niet iedere dag gedetailleerd bij te houden, maar hou er een oogje op!
+Meer </p>
+
+
+</div>
+
+<div class="category-content1" id="content2">
+
+<div class="change-theme">
+<font size=4>
+<b>Kleur:</b> 
+<button class="change-theme-button" style="background-color:white; color:white" onclick="changeColor2()"></button>
+<button class="change-theme-button" style="background-color:black; color:black;" onclick="changeColor1()"></button>
+<button class="change-theme-button" style="background-color:rgba(0,136,255,0.75); color:rgba(0,136,255,0.75)" onclick="changeColor3()"></button>
+<button class="change-theme-button" style="background-color:rgba(0,135,10,0.75); color:rgba(0,135,10,0.75)" onclick="changeColor4()"></button>
+<button class="change-theme-button" style="background-color:rgba(175,0,0,0.75); color:rgba(175,0,0,0.75)" onclick="changeColor5()"></button>
+<button class="change-theme-button" style="background-color:rgba(255,247,0,0.75); color:rgba(255,247,0,0.75)" onclick="changeColor6()"></button>
+</font>
+</div>
+
+<p><b><font size=6>Afvallen</font></b> 
+<br>Wil je snel afvallen ? Dan ben je zeker niet de enige! 
+Veel mensen beginnen vlak voor een speciale gelegenheid of een vakantie nog even aan een snel dieet. 
+Het slechte nieuws: veel van die mensen slagen er niet in om ook echt veel slanker te worden of te blijven.
+
+<br><br>Wil je echt een zichtbaar resultaat zien? 
+Dan zul je de valkuilen uit de meest gehoorde adviezen moeten vermijden. 
+Hier leg ik je uit hoe je gewicht kunt verliezen, en hoe snel dat kan.
+
+
+</p>
+
+</div>
+
+</div>
+
+<script src='//code.jquery.com/jquery-2.0.0.js'></script>
+<script>
+
+var hint = document.getElementById('content');
+var hint2 = document.getElementById('content2');
+
+function showContent() {
+  if(hint2.style.visibility == 'visible')
+  {
+	hint2.style.visibility = 'hidden';
+    	hint2.style.opacity = '0';
+	hint2.style.height = '0';
+	hint2.style.padding = '0';
+
+	setTimeout(showContent, 700);
+  }
+  else 
+  {
+  	if(hint.style.visibility == 'visible')
+  	{
+    		hint.style.visibility = 'hidden';
+    		hint.style.opacity = '0';
+		hint.style.height = '0';
+  	}
+  	else
+  	{
+    		hint.style.visibility = 'visible';
+    		hint.style.opacity = '1';
+		hint.style.height = '700px';
+  	}
+  }
+}
+
+function showContent2() {
+  if(hint.style.visibility == 'visible')
+  {
+	hint.style.visibility = 'hidden';
+    	hint.style.opacity = '0';
+	hint.style.height = '0';
+	hint.style.padding = '0';
+
+	setTimeout(showContent2, 700);
+  }
+  else
+  {
+  	if(hint2.style.visibility == 'visible')
+  	{
+    		hint2.style.visibility = 'hidden';
+    		hint2.style.opacity = '0';
+		hint2.style.height = '0';
+  	}
+  	else
+  	{
+    		hint2.style.visibility = 'visible';
+    		hint2.style.opacity = '1';
+		hint2.style.height = '500px';
+  	}
+  }
+}
+
+function changeColor1()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = '#E0E0E0';
+		hint.style.backgroundColor = 'black';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = '#E0E0E0';
+		hint2.style.backgroundColor = 'black';
+	}
+}
+
+function changeColor2()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = 'black';
+		hint.style.backgroundColor = 'rgba(238, 238, 238, 0.8)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = 'black';
+		hint2.style.backgroundColor = 'rgba(238, 238, 238, 0.8)';
+	}
+}
+
+function changeColor3()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = '#E0E0E0';
+		hint.style.backgroundColor = 'rgba(0, 130, 235, 0.75)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = '#E0E0E0';
+		hint2.style.backgroundColor = 'rgba(0, 130, 235, 0.75)';
+	}
+}
+
+function changeColor4()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = '#E0E0E0';
+		hint.style.backgroundColor = 'rgba(0, 135, 10, 0.75)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = '#E0E0E0';
+		hint2.style.backgroundColor = 'rgba(0, 135, 10, 0.75)';
+	}
+}
+
+function changeColor5()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = '#E0E0E0';
+		hint.style.backgroundColor = 'rgba(175, 0, 0, 0.75)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = '#E0E0E0';
+		hint2.style.backgroundColor = 'rgba(175, 0, 0, 0.75)';
+	}
+}
+
+function changeColor6()
+{
+	if(hint.style.visibility == 'visible')
+	{
+		hint.style.color = 'black';
+		hint.style.backgroundColor = 'rgba(255, 247, 0, 0.75)';
+	}
+	
+	else if(hint2.style.visibility == 'visible')
+	{
+		hint2.style.color = 'black';
+		hint2.style.backgroundColor = 'rgba(255, 247, 0, 0.75)';
+	}
+}
+
+</script>
+
+</body>
+
+</html>
